@@ -1,0 +1,71 @@
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
+    gap:var(--gap)
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 1.5rem;
+}
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position:absolute;
+    font-size: 6rem;
+    font-style: italic;
+    top: -2.5rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img:hover {
+    transition: all 300ms ease-in-out;
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.responsive-table {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.pricing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+table {
+    min-width: 30rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-size: 1.6rem;
+    font-style:italic;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+table td, table th {
+    white-space: nowrap;
+    padding: 1rem 3rem;
+    border: 0.2rem solid var(--light-gray-color)
+}
+tfoot td, table th{
+    background-color: var(--light-gray-color);
+}
